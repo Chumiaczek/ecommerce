@@ -1,9 +1,11 @@
-import { Facebook, Instagram, MailOutline, Phone, Pinterest, Room, Twitter } from '@material-ui/icons'
+import { Facebook, Instagram, MailOutline, Phone, Room, Twitter } from '@material-ui/icons'
 import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
     display: flex;
+    background-color: black;
+    color: white;
 `
 const Left = styled.div`
     flex: 1;
@@ -78,7 +80,6 @@ const Footer = () => {
                     <SocialIcon color="3B5999"><Facebook /></SocialIcon>
                     <SocialIcon color="E4405F"><Instagram /></SocialIcon>
                     <SocialIcon color="55ACEE"><Twitter /></SocialIcon>
-                    <SocialIcon color="E60023"><Pinterest /></SocialIcon>
                 </SocialContainer>
             </Left>
             <Center>
@@ -86,8 +87,9 @@ const Footer = () => {
                 <List>
                     <ListItem>Home</ListItem>
                     <ListItem>Cart</ListItem>
-                    <ListItem>Man Fashion</ListItem>
-                    <ListItem>Woman Fashion</ListItem>
+                    <ListItem>New Rap</ListItem>
+                    <ListItem>Classic Rap</ListItem>
+                    <ListItem>Old Style Rap</ListItem>
                     <ListItem>Accessories</ListItem>
                     <ListItem>My Account</ListItem>
                     <ListItem>Order Tracking</ListItem>

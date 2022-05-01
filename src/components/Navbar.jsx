@@ -5,6 +5,8 @@ import styled from "styled-components";
 
 const Container = styled.div`
   height: 60px;
+  background-color: black;
+  color: white;
 `;
 const Wrapper = styled.div`
   padding: 6px 20px;
@@ -25,6 +27,10 @@ const Language = styled.span`
 `;
 const Input = styled.input`
   border: none;
+  background-color: black;
+  color: white;
+  width: 100%;
+  outline: none;
 `;
 const SearchContainer = styled.div`
   border: 0.5px solid lightgray;

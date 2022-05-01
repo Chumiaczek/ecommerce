@@ -7,7 +7,8 @@ import Newsletter from '../components/Newsletter'
 import Products from '../components/Products'
 
 const Container = styled.div`
-
+    background-color: #111111;
+    color: white;
 `
 const Title = styled.h1`
     font-weight: 800;
@@ -28,9 +29,12 @@ const FilterText = styled.span`
 const Select = styled.select`
     padding: 5px;
     margin-right: 20px;
+    color: white;
+    background-color: black;
 `
 const Option = styled.option`
-
+    background-color: black;
+    color: white;
 `
 
 const ProductList = () => {
@@ -38,26 +42,17 @@ const ProductList = () => {
         <Container>
             <Announcement />
             <Navbar />
-            <Title>Dresses</Title>
+            <Title>Songs</Title>
             <FilterContainer>
                 <Filter>
                     <FilterText>Filter Products:</FilterText>
                     <Select>
-                        <Option disabled selected>Color</Option>
-                        <Option>White</Option>
-                        <Option>Black</Option>
-                        <Option>Red</Option>
-                        <Option>Blue</Option>
-                        <Option>Yellow</Option>
-                        <Option>Green</Option>
-                    </Select>
-                    <Select>
-                        <Option disabled selected>Size</Option>
-                        <Option>XS</Option>
-                        <Option>S</Option>
-                        <Option>M</Option>
-                        <Option>L</Option>
-                        <Option>XL</Option>
+                        <Option disabled selected>Type</Option>
+                        <Option>CD</Option>
+                        <Option>CD+DVD</Option>
+                        <Option>DVD</Option>
+                        <Option>Analog</Option>
+                        <Option>Casett</Option>
                     </Select>
                 </Filter>
                 <Filter>

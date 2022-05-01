@@ -1,11 +1,26 @@
 import React from "react";
 import styled from "styled-components";
 
+const Overlay = styled.div`
+    background: #000000db;
+    transition: all 0.2s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+`
 const Container = styled.div`
     flex: 1;
     margin: 3px;
     height: 70vh;
     position: relative;
+
+    &:hover ${Overlay}{
+        opacity: 1;
+    }
 `
 const Image = styled.img`
     width: 100%;
@@ -35,12 +50,19 @@ const Button = styled.button`
     color: gray;
     cursor: pointer;
     font-weight: 600;
+    transition: all 0.2s ease;
+
+    &:hover{
+        background-color: teal;
+        color: white;
+    }
 `
 
 const CategoryItem = ({ item }) => {
     return (
         <Container>
             <Image src={item.img} />
+            <Overlay></Overlay>
             <Info>
                 <Title>{item.title}</Title>
                 <Button>SHOP NOW</Button>
