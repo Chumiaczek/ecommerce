@@ -15,11 +15,20 @@ const Title = styled.h1`
     font-size: 70px;
     font-weight: 800;
     margin-bottom: 20px;
+
+    @media screen and (max-width: 768px){
+        font-size: 50px;
+    }
 `
 const Description = styled.div`
     font-size: 24px;
     font-weight: 300;
     margin-bottom: 20px;
+
+    @media screen and (max-width: 768px){
+        font-size: 18px;
+        text-align: center;
+    }
 `
 const InputContainer = styled.div`
     width: 50%;
@@ -27,6 +36,9 @@ const InputContainer = styled.div`
     background-color: #111111;
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: 768px){
+        width: 80%;
+    }
 `
 const Input = styled.input`
     flex: 8;

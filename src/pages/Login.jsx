@@ -10,18 +10,31 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width: 768px){
+        width: 100%;
+        max-height: 100vh;
+        background-size: cover;
+    }
 `
 const Wrapper = styled.div`
     padding: 20px;
     width: 40%;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
+    @media screen and (max-width: 768px){
+        width: 100%;
+        height: 100%;
+        padding: 0px 20px;
+    }
 `
 const Title = styled.h1`
     font-weight: 300;
     font-size: 24px;
     margin-bottom: 20px;
     text-align: center;
+    @media screen and (max-width: 768px){
+        margin-top: 20px;
+    }
 `
 const Form = styled.form`
     display: flex;

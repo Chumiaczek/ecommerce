@@ -1,15 +1,16 @@
 import { Add, Remove } from '@material-ui/icons'
-import React from 'react'
+import React, { useState } from "react";
 import styled from 'styled-components'
 import Announcement from '../components/Announcement'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import Sidebar from '../components/Sidebar'
 
 const Container = styled.div`
     background-color: black;
 `
 const Wrapper = styled.div`
-    paddin: 20px;
+    padding: 20px;
     background-color: #111111;
     color: white;
     min-height: 63.5vh;
@@ -24,6 +25,10 @@ const Top = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 20px;
+    @media screen and (max-width: 768px){
+        flex-direction: column;
+        padding: 20px 0;
+    }
 `
 const TopButton = styled.button`
     padding: 10px;
@@ -37,9 +42,14 @@ const TopButton = styled.button`
     &:hover{
         background-color: ${props => props.type === "outline" ? "teal" : "black"};
     }
+    @media screen and (max-width: 768px){
+        margin-bottom: 20px;
+    }
 `
 const TopTexts = styled.div`
-
+    @media screen and (max-width: 768px){
+        margin-bottom: 20px;
+    }
 `
 const TopText = styled.span`
     text-decoration: underline;
@@ -54,6 +64,9 @@ const Bottom = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 30px;
+    @media screen and (max-width: 768px){
+        flex-direction: column;
+    }
 `
 const Info = styled.div`
     flex: 3;
@@ -66,10 +79,18 @@ const Product = styled.div`
     margin: 20px 5px 20px 0;
     padding: 20px;
     border: 1px solid teal;
+    @media screen and (max-width: 768px){
+        flex-direction: column;
+    }
 `
 const ProductDetail = styled.div`
     flex: 2;
     display: flex;
+    @media screen and (max-width: 768px){
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 `
 const Image = styled.img`
     width: 200px;
@@ -158,10 +179,16 @@ const Button = styled.button`
 `
 
 const Cart = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const toggle = () => {
+        setIsOpen(!isOpen);
+    }
+
     return (
         <Container>
             <Announcement />
-            <Navbar />
+            <Navbar isOpen={isOpen} toggle={toggle} />
+            <Sidebar isOpen={isOpen} toggle={toggle} />
             <Wrapper>
                 <Title>YOUR BAG</Title>
                 <Top>

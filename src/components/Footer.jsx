@@ -6,6 +6,9 @@ const Container = styled.div`
     display: flex;
     background-color: black;
     color: white;
+    @media screen and (max-width: 768px){
+        flex-direction: column;
+    }
 `
 const Left = styled.div`
     flex: 1;
@@ -37,6 +40,9 @@ const SocialIcon = styled.div`
 const Center = styled.div`
     flex: 1;
     padding: 20px;
+    @media screen and (max-width: 768px){
+        display: none;
+    }
 `
 const Title = styled.h3`
     margin-bottom: 30px;

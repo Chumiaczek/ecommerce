@@ -11,6 +11,10 @@ const Overlay = styled.div`
     position: absolute;
     top: 0;
     left: 0;
+    @media screen and (max-width: 768px){
+        background: #00000083;
+        opacity: 1;
+    }
 `
 const Container = styled.div`
     flex: 1;
@@ -26,6 +30,10 @@ const Image = styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    @media screen and (max-width: 768px){
+        height: 33vh;
+        background: #0000001f;
+    }
 `
 const Info = styled.div`
     position: absolute;

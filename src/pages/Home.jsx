@@ -12,7 +12,6 @@ const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
     setIsOpen(!isOpen);
-    console.log("opened")
   }
 
   return (
@@ -24,7 +23,7 @@ const Home = () => {
       <Categories />
       <Products />
       <Newsletter />
-
+      <Footer />
     </div>
   );
 };

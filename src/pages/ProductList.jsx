@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from "react";
 import styled from 'styled-components'
 import Announcement from '../components/Announcement'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import Newsletter from '../components/Newsletter'
 import Products from '../components/Products'
+import Sidebar from '../components/Sidebar'
 
 const Container = styled.div`
     background-color: #111111;
@@ -38,10 +39,16 @@ const Option = styled.option`
 `
 
 const ProductList = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const toggle = () => {
+        setIsOpen(!isOpen);
+    }
+
     return (
         <Container>
             <Announcement />
-            <Navbar />
+            <Navbar isOpen={isOpen} toggle={toggle} />
+            <Sidebar isOpen={isOpen} toggle={toggle} />
             <Title>Songs</Title>
             <FilterContainer>
                 <Filter>
