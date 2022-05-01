@@ -1,5 +1,6 @@
 import { Badge } from "@material-ui/core";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
+import { FaBars } from "react-icons/fa";
 import React from "react";
 import styled from "styled-components";
 
@@ -7,6 +8,7 @@ const Container = styled.div`
   height: 60px;
   background-color: black;
   color: white;
+  z-index: ${({ isOpen }) => (isOpen ? "0" : "100")};
 `;
 const Wrapper = styled.div`
   padding: 6px 20px;
@@ -17,7 +19,11 @@ const Wrapper = styled.div`
 const Left = styled.div`
   flex: 1;
   display: flex;
-  align-itmes: center;
+  align-items: center;
+
+  @media screen and (max-width: 768px){
+    display: none;
+  }
 `;
 const Language = styled.span`
   font-size: 14;
@@ -42,6 +48,9 @@ const SearchContainer = styled.div`
 const Center = styled.div`
   flex: 1;
   text-align: center;
+  @media screen and (max-width: 768px){
+    text-align: left;
+  }
 `;
 const Logo = styled.h1`
   font-weight: bold;
@@ -51,14 +60,28 @@ const Right = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  @media screen and (max-width: 768px){
+    display: none;
+  }
 `;
+const Mobile = styled.div`
+  flex: 1;
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
+
+  @media screen and (max-width: 768px){
+    display: flex;
+  }
+`
 const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
 `;
 
-const Navbar = () => {
+const Navbar = ({ isOpen, toggle }) => {
   return (
     <Container>
       <Wrapper>
@@ -81,6 +104,9 @@ const Navbar = () => {
             </Badge>
           </MenuItem>
         </Right>
+        <Mobile>
+          <FaBars fontSize="24px" cursor="pointer" z-index="999" onClick={toggle} />
+        </Mobile>
       </Wrapper>
     </Container>
   );
