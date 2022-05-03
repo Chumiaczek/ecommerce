@@ -141,7 +141,7 @@ const Product = () => {
                 </ImageContainer>
                 <InfoContainer>
                     <Title>Megalomania</Title>
-                    <Desc>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde possimus corporis ut asperiores repudiandae culpa voluptas, soluta vero iusto at reprehenderit nobis quaerat perferendis ex ipsum tenetur quia perspiciatis maxime!</Desc>
+                    <Desc>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed laborum, optio architecto recusandae exercitationem eveniet ipsa! Nemo natus officia accusamus laborum voluptatum quo illo voluptatibus atque optio. Asperiores, corrupti non.</Desc>
                     <Price>$20</Price>
                     <AddContainer>
                         <AmountContainer>
